@@ -1,4 +1,4 @@
-package configuration;
+package beans;
 
 import oracle.jdbc.pool.OracleDataSource;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -12,7 +12,7 @@ import java.sql.SQLException;
 
 @Configuration
 @ConfigurationProperties("oracle")
-public class OracleConfiguration {
+public class OracleConfigurator {
     @NotNull
     private String username;
 

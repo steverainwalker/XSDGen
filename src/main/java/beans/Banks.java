@@ -22,30 +22,37 @@ public class Banks {
     @GeneratedValue(strategy=GenerationType.AUTO)
 	@XmlID
 	@XmlElement(name="bank_id", required = true)
-	private String bank_id;
+	private String bankID;
 	@XmlElement(name="bank_name", required = true)
-	private String bank_name;
+	private String bankName;
 	
 	public Banks(){
 		
 	}
 	
-	public Banks(String bank_id, String bank_name) {
-		this.bank_id = bank_id;
-		this.bank_name = bank_name;
+	public Banks(String bankID, String bankName) {
+		this.bankID = bankID;
+		this.bankName = bankName;
 	}
 	
-    public String getBank_id() {
-		return bank_id;
+    public String getBankID() {
+		return bankID;
 	}
-	public void setBank_id(String bank_id) {
-		this.bank_id = bank_id;
+	public void setBankID(String bankID) {
+		this.bankID = bankID;
 	}
-	public String getBank_name() {
-		return bank_name;
+	public String getBankName() {
+		return bankName;
 	}
-	public void setBank_name(String bank_name) {
-		this.bank_name = bank_name;
+	public void setBank_name(String bankName) {
+		this.bankName = bankName;
+	}
+	
+	public String toString()
+	{
+		return String.format(
+                "Bank[bankID=%d, bankName='%s']",
+                bankID, bankName);
 	}
 	
 }
